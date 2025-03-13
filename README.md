@@ -85,3 +85,47 @@ You can see the supported chipsets from the help command mentioned above. Here w
 python -m qai_hub_models.models.yolov11_det_quantized.export --target-runtime qnn --chipset qualcomm-qcs6490-proxy
 ```
 It will literally follow the same procedure and finally download a .bin model to your current CLI position.
+
+#### Problems encountered
+If you run the above export command on Traditional Chinese Windows, you may encounter the following error:
+
+#### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
+
+````plaintext
+File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\models\yolov11_det_quantized\model.py", line 23, in from_pretrained
+    return super().from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\models\yolov11_det\model.py", line 63, in from_pretrained
+    find_replace_in_repo(
+  File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\utils\asset_loaders.py", line 371, in find_replace_in_repo
+    for line in file:
+  File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\fileinput.py", line 251, in __next__
+    line = self._readline()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\fileinput.py", line 372, in _readline
+    return self._readline()
+           ^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'cp950' codec can't decode byte 0xf0 in position 19: illegal multibyte sequence
+````
+
+##### Solution
+Open qai_hub_models\utils\asset_loaders.py and jump to line 371, where you should see the following code snippet:
+
+```py
+    with fileinput.FileInput(
+        Path(repo_path) / filepath,
+        inplace=True,
+        backup=".bak",
+    ) as file:
+```
+
+Add **encoding="utf-8** to FileInput() as an argument so that it becomes:
+
+``` py
+    with fileinput.FileInput(
+        Path(repo_path) / filepath,
+        inplace=True,
+        backup=".bak",
+        encoding="utf-8,
+    ) as file:
+```
