@@ -1,8 +1,14 @@
 # qai-hub-Environment-Setup-Command-History
 Last update: 2025/3/13
 
-⚠ **Disclaimer**: This repository only contains personal development notes based on publicly available information.
-It does not contain any confidential Qualcomm materials or proprietary SDKs.
+## ⚠ Disclaimer
+
+This repository contains personal development notes based on **publicly available information** from:
+- **Qualcomm official website**: [Qualcomm AI Hub](https://aihub.qualcomm.com/)
+- **Qualcomm official documentation**
+- **Qualcomm Support Forum** responses from official representatives
+
+🚀 **This repository does NOT contain any confidential Qualcomm materials, proprietary SDKs, or unpublished APIs.**
 
 
 ## qai-hub Module versions
