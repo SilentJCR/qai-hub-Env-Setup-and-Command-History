@@ -26,12 +26,15 @@ pip install --upgrade pip setuptools wheel
 Visit [Qualcomm AI Hub](https://aihub.qualcomm.com/) (Right-click to open in a new tab) and log in.
 
 Go to **Settings** and check **Getting started**, where you should see the following:
+
+<img src="assets/images/qaihub_getting_started.jpg" width="600">
+
+Copy the following content and execute it to both install and configure qai-hub.
+
 ```
 pip install qai-hub
 qai-hub configure --api_token (YOUR_TOKEN)
 ```
-
-Copy those 2 lines and execute them to both install and configure qai-hub.
 
 ### qai-hub-models installation
 You may install qai-hub-models by yourself or directly install additional dependencies that are required for some models such as YOLOv11, because it will automatically install the dependencies including qai-hub-models.
@@ -58,7 +61,9 @@ python -m qai_hub_models.models.yolov11_det_quantized.export
 ```
 The whole process would first git clone ultralytics and download the yolov11n.pt to path /root/.qaihm/models and COCO dataset to path /root/.qaihm/fiftyone in your device.
 
-The downloaded .pt model will then be uploaded to Qualcomm AI Hub, where **compiling**, **quantization** (if necessary), **profiling**, and **inference** of the uploaded model will be executed. You can check the details of those tasks on https://app.aihub.qualcomm.com/jobs/ .
+The downloaded .pt model will then be uploaded to Qualcomm AI Hub, where **compiling**, **quantization** (if necessary), **profiling**, and **inference** of the uploaded model will be executed. You can check the details of those tasks on https://app.aihub.qualcomm.com/jobs/ as shown in the picture below.
+
+<img src="assets/images/qaihub_jobs.jpg" width="800">
 
 After all the tasks above have been done, a TensorFlow Lite (.tflite) model will be downloaded to your current CLI position in your device. A folder named **build** would be created and you can see the quantized model there.
 
@@ -67,6 +72,8 @@ If you want to export a QNN (.bin) model, you need to add additional arguments. 
 ```
 python -m qai_hub_models.models.yolov11_det_quantized.export --help
 ```
+
+<img src="assets/images/qaihub_export_help.jpg" width="800">
 
 We didn't specify the target runtime so by default a .tflite model will be compiled and downloaded. To download a QNN model, --target-runtime and --chipset arguments are required.
 
