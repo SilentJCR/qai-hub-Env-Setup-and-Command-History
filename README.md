@@ -99,9 +99,11 @@ python -m qai_hub_models.models.yolov11_det_quantized.export --target-runtime qn
 It will literally follow the same procedure and finally download a .bin model to your current CLI position.
 
 ### Problems encountered
-If you run the above export command on Traditional Chinese Windows, you may encounter the following error:
+The steps mentioned above helps download certain models, but still don't really work on lots of models due to some different reasons such as lacking certain dependencies such as aimet-torch. This problem still needs to be mentioned in the support forum in the future.
 
-#### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
+#### `UnicodeDecodeError: 'cp950'` Issue
+
+If you run the above export command on Traditional Chinese Windows, you may encounter the following error:
 
 ````plaintext
 File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\models\yolov11_det_quantized\model.py", line 23, in from_pretrained
