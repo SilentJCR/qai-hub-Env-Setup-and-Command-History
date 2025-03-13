@@ -7,6 +7,14 @@ qai-hub 0.25.0
 qai-hub-models 0.24.3
 
 ## Environment setup
+It's highly recommended that you setup a clean environment using things like miniconda or Virtualenv. Here I'll use miniconda.
+### miniconda environment creation
+You can specify the Python version, ranging from 3.9 to 3.13, and the name of the environment is up to you.
+```
+conda create -n qaihub_py311 python=3.11
+conda activate qaihub_py311
+```
+
 ### pip update
 
 Remember to update pip before going further. Otherwise, you may unexpectedly install the older versions of qai-hub modules.
