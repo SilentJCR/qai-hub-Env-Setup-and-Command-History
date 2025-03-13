@@ -1,6 +1,10 @@
 # qai-hub-Environment-Setup-Command-History
 Last update: 2025/3/13
 
+⚠ **Disclaimer**: This repository only contains personal development notes based on publicly available information.
+It does not contain any confidential Qualcomm materials or proprietary SDKs.
+
+
 ## qai-hub Module versions
 qai-hub 0.25.0
 
