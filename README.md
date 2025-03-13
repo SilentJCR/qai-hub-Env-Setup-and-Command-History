@@ -89,7 +89,7 @@ It will literally follow the same procedure and finally download a .bin model to
 #### Problems encountered
 If you run the above export command on Traditional Chinese Windows, you may encounter the following error:
 
-#### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
+##### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
 
 ````plaintext
 File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\models\yolov11_det_quantized\model.py", line 23, in from_pretrained
