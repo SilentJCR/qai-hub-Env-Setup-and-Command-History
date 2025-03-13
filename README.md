@@ -131,14 +131,14 @@ Open qai_hub_models\utils\asset_loaders.py and jump to line 371, where you shoul
     ) as file:
 ```
 
-Add **encoding="utf-8** to FileInput() as an argument so that it becomes:
+Add **encoding="utf-8"** to FileInput() as an argument so that it becomes:
 
 ``` py
     with fileinput.FileInput(
         Path(repo_path) / filepath,
         inplace=True,
         backup=".bak",
-        encoding="utf-8,
+        encoding="utf-8",
     ) as file:
 ```
 
