@@ -37,7 +37,7 @@ qai-hub configure --api_token (YOUR_TOKEN)
 ```
 
 ### qai-hub-models installation
-You may install qai-hub-models by yourself or directly install additional dependencies that are required for some models such as YOLOv11, because it will automatically install the dependencies including qai-hub-models.
+You may install qai-hub-models by yourself or directly install additional dependencies required for some models such as YOLOv11, because qai-hub-models will be automatically installed as well.
 ```
 pip install qai-hub-models
 ```
