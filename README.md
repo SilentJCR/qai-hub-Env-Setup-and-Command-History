@@ -23,7 +23,7 @@ pip install --upgrade pip setuptools wheel
 ```
 
 ### Installation and configuration of qai-hub
-Visit <a href="https://aihub.qualcomm.com/" target="_blank">Qualcomm AI Hub</a> and log in.
+Visit [Qualcomm AI Hub](https://aihub.qualcomm.com/) (Right-click to open in a new tab) and log in.
 
 Go to **Settings** and check **Getting started**, where you should see the following:
 ```
@@ -46,7 +46,7 @@ pip install --no-cache-dir "qai-hub-models[yolov11-det-quantized]"
 ```
 
 ### Model export
-You can download models directly from Qualcomm AI Hub, but some models such as <a href="https://aihub.qualcomm.com/models/yolov11_det_quantized" target="_blank">YOLOv11-Detection-Quantized</a> can't be downloaded from there due to some licensing constraints, so you don't see the **Download model** button there. Therefore, press the **Model Repository** button and you should see check the **Example & Usage** section, where you will see the command that was mentioned before.
+You can download models directly from Qualcomm AI Hub, but some models such as [YOLOv11-Detection-Quantized](https://aihub.qualcomm.com/models/yolov11_det_quantized) can't be downloaded from there due to some licensing constraints, so you don't see the **Download model** button there. Therefore, press the **Model Repository** button and you should see check the **Example & Usage** section, where you will see the command that was mentioned before.
 
 ```
 pip install "qai-hub-models[yolov11-det-quantized]"
