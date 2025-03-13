@@ -48,7 +48,9 @@ or
 pip install --no-cache-dir "qai-hub-models[yolov11-det-quantized]"
 ```
 
-### Model export
+## Model export
+
+### Export
 You can download most models directly from Qualcomm AI Hub, but there are exceptions.
 
 Some models such as [YOLOv11-Detection-Quantized](https://aihub.qualcomm.com/models/yolov11_det_quantized) can't be downloaded from there due to some licensing constraints, so you don't see the **Download model** button there. Instead, press the **Model Repository** button and you should see check the **Example & Usage** section, where you will see the command that was mentioned before.
@@ -86,10 +88,10 @@ python -m qai_hub_models.models.yolov11_det_quantized.export --target-runtime qn
 ```
 It will literally follow the same procedure and finally download a .bin model to your current CLI position.
 
-#### Problems encountered
+### Problems encountered
 If you run the above export command on Traditional Chinese Windows, you may encounter the following error:
 
-##### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
+#### Fixing `UnicodeDecodeError: 'cp950'` Issue in Windows
 
 ````plaintext
 File "C:\Users\user\miniconda3\envs\qaihub_py311\Lib\site-packages\qai_hub_models\models\yolov11_det_quantized\model.py", line 23, in from_pretrained
