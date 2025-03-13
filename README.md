@@ -131,3 +131,11 @@ Add **encoding="utf-8** to FileInput() as an argument so that it becomes:
         encoding="utf-8,
     ) as file:
 ```
+
+## References
+
+[AI Hub Models](https://github.com/quic/ai-hub-models/)
+
+[Qualcomm AI Hub](https://aihub.qualcomm.com/)
+
+[Qualcomm AI Hub documentation](https://app.aihub.qualcomm.com/docs/index.html)
