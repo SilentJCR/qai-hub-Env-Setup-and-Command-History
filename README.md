@@ -14,7 +14,7 @@ This repository contains personal development notes based on **publicly availabl
 ## qai-hub Module versions
 qai-hub 0.25.0
 
-qai-hub-models 0.25.2
+qai-hub-models 0.25.2 (2025/3/14)
 
 ## Environment setup
 It's highly recommended that you setup a clean environment using things like miniconda or Virtualenv. Here I'll use miniconda.
@@ -145,6 +145,17 @@ Add **encoding="utf-8"** to FileInput() as an argument so that it becomes:
         encoding="utf-8",
     ) as file:
 ```
+
+## Others
+
+### Important paths
+When attempting to download a model via an export command, additional elements such as the raw model(i.e, yolov11n.pt) and some training data(i.e, COCO dataset) may also be downloaded first and they will be located in the .qaihm folder.
+
+#### Linux
+```plaintext
+/root/.qaihm
+```
+
 
 ## References
 
