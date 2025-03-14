@@ -1,5 +1,5 @@
 # qai-hub-Environment-Setup-Command-History
-Last update: 2025/3/13
+Last update: 2025/3/14
 
 ## ⚠ Disclaimer
 
@@ -14,7 +14,7 @@ This repository contains personal development notes based on **publicly availabl
 ## qai-hub Module versions
 qai-hub 0.25.0
 
-qai-hub-models 0.24.3
+qai-hub-models 0.25.2
 
 ## Environment setup
 It's highly recommended that you setup a clean environment using things like miniconda or Virtualenv. Here I'll use miniconda.
