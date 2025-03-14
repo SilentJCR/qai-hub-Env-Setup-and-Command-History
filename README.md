@@ -65,6 +65,8 @@ You can download most models directly from Qualcomm AI Hub, but there are except
 
 Some models such as [YOLOv11-Detection-Quantized](https://aihub.qualcomm.com/models/yolov11_det_quantized) can't be downloaded from there due to some licensing constraints, so you don't see the **Download model** button there. Instead, press the **Model Repository** button and you should see check the **Example & Usage** section, where you will see the command that was mentioned before.
 
+<img src="assets/images/YOLOv11_q.jpg" width="600">
+
 ```
 pip install "qai-hub-models[yolov11-det-quantized]"
 ```
