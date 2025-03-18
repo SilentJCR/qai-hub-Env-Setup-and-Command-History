@@ -13,7 +13,6 @@ This repository contains personal development notes based on **publicly availabl
 
 ## qai-hub Module versions
 qai-hub 0.25.0
-
 qai-hub-models 0.25.3 (2025/3/18)
 
 ## Environment setup
