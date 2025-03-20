@@ -1,5 +1,5 @@
 # qai-hub-Environment-Setup-Command-History
-Last update: 2025/3/19
+Last update: 2025/3/20
 
 ## ⚠ Disclaimer
 
@@ -17,9 +17,12 @@ qai-hub 0.25.0
 qai-hub-models 0.25.3 (2025/3/18)
 
 ## Environment setup
-It's highly recommended that you setup a clean environment using things like miniconda or Virtualenv. Here I'll use miniconda.
-### miniconda environment creation
+It's highly recommended that you setup a clean environment using things like Miniconda or Virtualenv. Here I'll use miniconda.
+
+### Miniconda environment creation
+
 You can specify the Python version (3.9–3.13) and define an environment name of your choice.
+
 ```sh
 conda create -n qaihub_py311 python=3.11
 conda activate qaihub_py311
@@ -28,6 +31,7 @@ conda activate qaihub_py311
 ### pip update
 
 Remember to update pip before going further. Otherwise, you may unexpectedly install the older versions of qai-hub modules.
+
 ```sh
 pip install --upgrade pip setuptools wheel
 ```
@@ -48,6 +52,7 @@ qai-hub configure --api_token (YOUR_TOKEN)
 
 ### qai-hub-models installation
 You can either install `qai-hub-models` manually or install additional dependencies required for certain models (e.g., YOLOv11), which will also automatically install `qai-hub-models`.
+
 ```sh
 pip install qai-hub-models
 ```
@@ -70,11 +75,13 @@ Certain models such as [YOLOv11-Detection-Quantized](https://aihub.qualcomm.com/
 ```sh
 pip install "qai-hub-models[yolov11-det-quantized]"
 ```
+
 After the dependency installation, run the folllowing command:
 
 ```sh
 python -m qai_hub_models.models.yolov11_det_quantized.export
 ```
+
 The whole process first clones the Ultralytics repository, downloads the `yolov11n.pt` model to `/root/.qaihm/models`, and saves the COCO dataset to `/root/.qaihm/fiftyone` on your device.
 
 The downloaded .pt model will then be uploaded to Qualcomm AI Hub, where **compiling**, **quantization**, **profiling**, and **inference** of the uploaded model will be executed. You can check the details of those tasks on https://app.aihub.qualcomm.com/jobs/ as shown in the picture below.
